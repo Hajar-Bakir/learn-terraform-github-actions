@@ -40,7 +40,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t2.micro"
-  vpc_security_group_ids = [vpc-068d669d12ffc45c1]
+  vpc_security_group_ids = [aws_security_group.web-sg.id]
 
   user_data = <<-EOF
               #!/bin/bash
