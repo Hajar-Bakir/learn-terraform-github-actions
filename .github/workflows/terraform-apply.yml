@@ -3,7 +3,7 @@ name: "Terraform Apply"
 on:
   push:
     branches:
-      - main
+      - Hajar
 
 env:
   TF_CLOUD_ORGANIZATION: "terraform-github-ci"
